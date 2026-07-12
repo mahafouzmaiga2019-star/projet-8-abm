@@ -5,20 +5,19 @@
 Ce projet implémente un modèle à base d'agents (ABM) pour simuler la propagation d'une épidémie selon la dynamique SIR (Sain, Infecté, Rétabli) au sein d'une population de 10 000 individus. L'objectif est d'analyser l'impact de l'hétérogénéité des réseaux de contacts sur la diffusion du virus et d'évaluer le compromis (\*trade-off\*) entre l'efficacité sanitaire et le coût social de plusieurs politiques de contrôle.
 
 ## Structure du Projet
-
-```text
 ├── src/
-│   ├── \_\_init\_\_.py          # Centralisation et exposition des modules
-│   ├── networks.py          # Génération des réseaux (Poisson, Binomiale Négative, Power-Law)
-│   ├── simulation.py        # Moteur de l'ABM et suivi des transmissions secondaires
-│   └── strategies.py        # Algorithmes des scénarios d'intervention (Phase 3)
+│   ├── __init__.py           # Centralisation et exposition des modules
+│   ├── networks.py           # Génération des réseaux (Poisson, Binomiale Négative, Power-Law)
+│   ├── simulation.py         # Moteur de l'ABM et suivi des transmissions secondaires
+│   ├── strategies.py         # Algorithmes des scénarios d'intervention (Phase 3)
+│   └── analysis.py           # Analyse statistique (comparaison, proba d'extinction)[cite: 2]
 ├── notebooks/
-│   └── analyse\_epideme.ipynb # Analyses graphiques, statistiques et courbes de Lorenz
-├── main.py                  # Point d'entrée principal en ligne de commande
-├── requirements.txt         # Liste des dépendances Python
-└── README.md                # Documentation et synthèse des résultats
+│   └── analyse_epideme.ipynb # Analyses graphiques, statistiques et courbes de Lorenz
+├── main.py                   # Point d'entrée principal en ligne de commande
+├── requirements.txt          # Liste des dépendances Python
+└── README.md                 # Documentation et synthèse des résultats
 
-```
+
 
 ## Installation
 
