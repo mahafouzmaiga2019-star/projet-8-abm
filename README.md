@@ -1,4 +1,4 @@
-Voici le fichier **`README.md`** complet et structuré à placer à la racine de votre projet. Il fait la synthèse technique et scientifique de tout votre travail pour vos correcteurs.
+
 
 ```markdown
 # Projet 8 : Modélisation Agent-Centrée (ABM) et Impact des Super-Propagateurs
