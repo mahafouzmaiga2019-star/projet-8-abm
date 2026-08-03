@@ -59,6 +59,7 @@ La durée de la période infectieuse est fixée à $T_r = 6$ jours. Passé ce d�
 
 
 **2.3. Mesure de l'hétérogénéité et caractérisation de la super-propagation**
+
 Pour quantifier empiriquement la super-propagation générée par les modèles, notre algorithme trace l'arbre de transmission exact. Pour chaque agent infecté, nous comptabilisons le nombre de transmissions secondaires directes dont il est responsable.
 À partir de ces données individuelles, nous calculons l'Indice de Dispersion ($I_D = \frac{\sigma^2}{\mu}$), où $\sigma^2$ et $\mu$ sont respectivement la variance et la moyenne des infections secondaires. Un rapport $I_D \gg 1$ est la signature statistique d'un régime de super-propagation.
 Nous construisons également une Courbe de Lorenz empirique de la transmission. En triant les agents par ordre croissant du nombre d'infections causées, nous traçons le pourcentage cumulé des infections en fonction du pourcentage cumulé de la population infectée. Cela permet de vérifier la validité de la loi de Pareto et d'identifier de manière précise quel percentile supérieur de la population est responsable des événements de super-propagation (ex: le *Top 20%*).
@@ -84,7 +85,7 @@ Pour la Phase 3, nous avons implémenté plusieurs interventions non pharmaceuti
 
 Les simulations d'incidence menées sur les trois architectures de réseaux mettent en évidence le rôle critique de la distribution des contacts sur la cinétique épidémique. L'observation de l'évolution temporelle des cas actifs (infectés simultanément) révèle des profils d'incidence drastiquement différents :
 
-* **Réseau Homogène (Poisson) :** L'épidémie suit une courbe en cloche classique, caractéristique des modèles compartimentaux standards, avec un pic épidémique atteignant **3192** cas simultanés.
+* **Réseau Homogène (Poisson) :** L'épidémie suit une courbe en cloche classique, caractéristique des modèles compartimentaux standards, avec un pic épidémique atteignant 3192 cas simultanés.
 
 
 * **Réseau Surdispersé (Binomiale Négative) :** L'introduction d'une variance modérée dans les contacts amplifie la dynamique de contagion, repoussant le pic épidémique à un maximum absolu de 4031 cas actifs.
@@ -106,7 +107,7 @@ L'analyse microscopique des arbres de transmission permet de quantifier l'hété
 | **Binomiale Négative** | **2.33**<br> | **13**<br> | **76.2%**<br> |
 | **Power-Law (Hétérogène)** | **19.96**<br> | **78**<br> | **100.0%**<br> |
 
-L'indice de dispersion massique ($I_D = 19.96$) et la concentration absolue des transmissions (**100.0%** des cas générés par seulement **20%** des agents) démontrent que le réseau *Power-Law* modélise fidèlement une dynamique dominée par les super-propagateurs. À l'inverse, le réseau de Poisson s'éloigne significativement de la règle des 80/20, confirmant son inaptitude à simuler des épidémies réelles fortement hétérogènes.
+L'indice de dispersion massique ($I_D = 19.96$) et la concentration absolue des transmissions (100.0% des cas générés par seulement 20% des agents) démontrent que le réseau *Power-Law* modélise fidèlement une dynamique dominée par les super-propagateurs. À l'inverse, le réseau de Poisson s'éloigne significativement de la règle des 80/20, confirmant son inaptitude à simuler des épidémies réelles fortement hétérogènes.
 
 \newpage
 
